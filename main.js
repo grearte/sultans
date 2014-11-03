@@ -406,6 +406,8 @@ postGroup = function(token, userId, displayName){
 updateAndPostSequenceIqGroups = function (token, userId, company){
     updateGroup(token, userId, 'sequenceiq.cloudbreak.user')
     updateGroup(token, userId, 'sequenceiq.cloudbreak.admin')
+    updateGroup(token, userId, 'sequenceiq.banzai.user')
+    updateGroup(token, userId, 'sequenceiq.banzai.admin')
     postGroup(token, userId, 'sequenceiq.account.' + userId + '.' + company)
 }
 
@@ -414,6 +416,8 @@ updateCloudbreakGroups = function (token, userId) {
     updateGroup(token, userId, 'cloudbreak.stacks')
     updateGroup(token, userId, 'cloudbreak.blueprints')
     updateGroup(token, userId, 'cloudbreak.credentials')
+    updateGroup(token, userId, 'banzai.datasets')
+    updateGroup(token, userId, 'banzai.pipelines')
 }
 
 updateGroup = function(token, userId, displayName) {
